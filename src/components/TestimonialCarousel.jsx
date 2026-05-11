@@ -56,7 +56,7 @@ export default function TestimonialCarousel({ testimonials }) {
         </CardContent>
       </Card>
 
-      <Box sx={{ display: 'grid', gap: 1.2, gridTemplateColumns: { xs: '1fr', md: 'repeat(6, 1fr)' } }}>
+      {/* <Box sx={{ display: 'grid', gap: 1.2, gridTemplateColumns: { xs: '1fr', md: 'repeat(6, 1fr)' } }}>
         {testimonials.map((testimonial, index) => (
           <Box
             key={testimonial.name}
@@ -77,7 +77,7 @@ export default function TestimonialCarousel({ testimonials }) {
             </Typography>
           </Box>
         ))}
-      </Box>
+      </Box> */}
     </Box>
   );
 }
