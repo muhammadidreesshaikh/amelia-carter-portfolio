@@ -38,7 +38,7 @@ const floatingVariants = {
 
 function HeroVisual() {
   return (
-    <Box sx={{ position: 'relative', minHeight: { xs: 420, md: 640 }, borderRadius: 8, border: '1px solid rgba(255,255,255,0.1)', background: 'linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))', backdropFilter: 'blur(24px)', boxShadow: '0 30px 120px rgba(0,0,0,0.45)', overflow: 'hidden' }}>
+    <Box sx={{ position: 'relative', minHeight: { xs: 420, md: 640 }, borderRadius: 8, border: '1px solid rgba(255,255,255,0.1)', background: 'linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))', backdropFilter: 'blur(24px)', boxShadow: '0 30px 120px rgba(0,0,0,0.45)', overflow: 'hidden', p: { xs: 1.5, md: 2.5 } }}>
       <Box component={motion.div} animate={{ y: [0, -16, 0] }} transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }} sx={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 30% 30%, rgba(255,122,168,0.3), transparent 26%), radial-gradient(circle at 80% 15%, rgba(96,230,217,0.22), transparent 24%), linear-gradient(180deg, rgba(10,17,29,0.3), rgba(5,10,17,0.9))' }} />
       <Box sx={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px)', backgroundSize: '48px 48px', opacity: 0.35 }} />
 
@@ -52,7 +52,7 @@ function HeroVisual() {
 
           <Box sx={{ position: 'relative', alignSelf: 'center', width: { xs: 240, md: 340 }, mt: { xs: 1, md: 2 } }}>
             <Box component={motion.div} animate={{ rotate: [0, 2, 0, -2, 0] }} transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }} sx={{ position: 'relative', width: '100%', borderRadius: '50%', aspectRatio: '1 / 1', background: 'radial-gradient(circle at 35% 30%, rgba(255,255,255,0.28), transparent 18%), linear-gradient(145deg, rgba(255,122,168,0.8), rgba(96,230,217,0.45))', boxShadow: '0 0 80px rgba(255,122,168,0.24)', overflow: 'hidden' }}>
-              <Box sx={{ position: 'absolute', inset: 14, borderRadius: '50%', background: 'linear-gradient(180deg, rgba(9,17,30,0.2), rgba(9,17,30,0.72)), radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 25%)', border: '1px solid rgba(255,255,255,0.12)', display: 'grid', placeItems: 'center' }}>
+              <Box sx={{ position: 'absolute', inset: 18, borderRadius: '50%', background: 'linear-gradient(180deg, rgba(9,17,30,0.2), rgba(9,17,30,0.72)), radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 25%)', border: '1px solid rgba(255,255,255,0.12)', display: 'grid', placeItems: 'center', p: 2 }}>
                 <Typography variant="h3" sx={{ fontSize: { xs: 46, md: 62 }, textAlign: 'center' }}>
                   Amelia
                 </Typography>
@@ -92,7 +92,7 @@ export default function HomePage() {
         description="Premium portfolio website for Amelia Carter, a freelance graphic designer and animator with 7+ years of experience in branding, logo design, animation, thumbnails, backgrounds, and digital visuals."
       />
 
-      <Box component="section" sx={{ position: 'relative', minHeight: { xs: 'auto', md: 'calc(100vh - 88px)' }, py: { xs: 5, md: 9 } }}>
+      <Box component="section" sx={{ position: 'relative', minHeight: { xs: 'auto', md: 'calc(100vh - 88px)' }, py: { xs: 8, md: 12 } }}>
         <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} lg={6}>
@@ -110,14 +110,14 @@ export default function HomePage() {
                   <Button variant="outlined" size="large" href="#contact">Contact Me</Button>
                 </Stack>
 
-                <Stack direction="row" spacing={1.4} sx={{ flexWrap: 'wrap', pt: 1 }}>
+                {/* <Stack direction="row" spacing={1.4} sx={{ flexWrap: 'wrap', pt: 1 }}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: 'text.secondary' }}>
                     <EmailRounded fontSize="small" /> hello@ameliacarter.design
                   </Box>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: 'text.secondary' }}>
                     <Instagram fontSize="small" /> @ameliacarterart
                   </Box>
-                </Stack>
+                </Stack> */}
               </Stack>
             </Grid>
 
@@ -133,7 +133,9 @@ export default function HomePage() {
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={5}>
               <Box sx={{ minHeight: 520, borderRadius: 8, overflow: 'hidden', position: 'relative', border: '1px solid rgba(255,255,255,0.1)', background: 'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)), radial-gradient(circle at top, rgba(255,122,168,0.22), transparent 35%)', display: 'grid', placeItems: 'center' }}>
-                <Avatar alt="Amelia Carter placeholder" sx={{ width: { xs: 220, md: 300 }, height: { xs: 220, md: 300 }, bgcolor: 'transparent', border: '1px solid rgba(255,255,255,0.1)', background: 'radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), transparent 18%), linear-gradient(135deg, rgba(255,122,168,0.9), rgba(96,230,217,0.45))', boxShadow: '0 24px 90px rgba(0,0,0,0.4)', fontSize: 80, fontWeight: 900 }}>AC</Avatar>
+                <Box sx={{ p: { xs: 2, md: 3 }, borderRadius: '50%', background: 'rgba(255,255,255,0.03)' }}>
+                  <Avatar alt="Amelia Carter placeholder" sx={{ width: { xs: 220, md: 300 }, height: { xs: 220, md: 300 }, bgcolor: 'transparent', border: '1px solid rgba(255,255,255,0.1)', background: 'radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), transparent 18%), linear-gradient(135deg, rgba(255,122,168,0.9), rgba(96,230,217,0.45))', boxShadow: '0 24px 90px rgba(0,0,0,0.4)', fontSize: 80, fontWeight: 900 }}>AC</Avatar>
+                </Box>
               </Box>
             </Grid>
 

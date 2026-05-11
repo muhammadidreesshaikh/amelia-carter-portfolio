@@ -26,6 +26,7 @@ export default function TestimonialCarousel({ testimonials }) {
           background: 'linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03))',
           backdropFilter: 'blur(24px)',
           boxShadow: '0 24px 90px rgba(0,0,0,0.34)',
+          p: 0.5,
         }}
       >
         <CardContent sx={{ p: { xs: 3, md: 5 } }}>
@@ -64,7 +65,7 @@ export default function TestimonialCarousel({ testimonials }) {
             whileHover={{ y: -4 }}
             sx={{
               cursor: 'pointer',
-              p: 2.2,
+              p: 2.6,
               borderRadius: 4,
               border: '1px solid rgba(255,255,255,0.08)',
               background: active === index ? alpha('#ff7aa8', 0.12) : alpha('#ffffff', 0.04),

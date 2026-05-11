@@ -29,9 +29,9 @@ export default function CategoryPage({ categoryKey }) {
     <>
       <Seo title={`${category.title} | Amelia Carter Portfolio`} description={category.description} />
 
-      <Box component="section" sx={{ position: 'relative', py: { xs: 6, md: 9 } }}>
+      <Box component="section" sx={{ position: 'relative', py: { xs: 8, md: 12 } }}>
         <Container maxWidth="xl">
-          <Box sx={{ position: 'relative', overflow: 'hidden', borderRadius: 8, minHeight: { xs: 380, md: 520 }, border: '1px solid rgba(255,255,255,0.08)', background: `linear-gradient(135deg, ${alpha(category.accent, 0.22)}, rgba(8,16,27,0.72) 45%, ${alpha(category.glow, 0.16)})`, backdropFilter: 'blur(18px)', display: 'grid', alignItems: 'end', p: { xs: 3, md: 5 } }}>
+          <Box sx={{ position: 'relative', overflow: 'hidden', borderRadius: 8, minHeight: { xs: 380, md: 520 }, border: '1px solid rgba(255,255,255,0.08)', background: `linear-gradient(135deg, ${alpha(category.accent, 0.22)}, rgba(8,16,27,0.72) 45%, ${alpha(category.glow, 0.16)})`, backdropFilter: 'blur(18px)', display: 'grid', alignItems: 'end', p: { xs: 4, md: 6 } }}>
             <Box sx={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px)', backgroundSize: '60px 60px', opacity: 0.24 }} />
             <Box sx={{ position: 'relative', zIndex: 1, maxWidth: 840 }}>
               <Typography component={motion.span} variants={motionConfig} initial="hidden" animate="visible" custom={0.1} sx={{ display: 'inline-flex', px: 2, py: 1, borderRadius: 999, border: '1px solid rgba(255,255,255,0.12)', backgroundColor: alpha('#ffffff', 0.06), letterSpacing: '0.18em', textTransform: 'uppercase', color: 'secondary.light', fontSize: 12, fontWeight: 800 }}>

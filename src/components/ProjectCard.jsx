@@ -18,6 +18,7 @@ export default function ProjectCard({ title, description, image, to, accent, glo
         background: 'rgba(8,16,27,0.85)',
         boxShadow: '0 24px 70px rgba(0,0,0,0.4)',
         minHeight: { xs: 320, md: 420 },
+        p: 0.5,
       }}
     >
       <Box component={RouterLink} to={to} sx={{ display: 'block', height: '100%', color: 'inherit' }}>
@@ -52,7 +53,7 @@ export default function ProjectCard({ title, description, image, to, accent, glo
             flexDirection: 'column',
             justifyContent: 'flex-end',
             height: '100%',
-            p: { xs: 3, md: 4 },
+            p: { xs: 3.5, md: 4.5 },
           }}
         >
           <Box
@@ -69,6 +70,7 @@ export default function ProjectCard({ title, description, image, to, accent, glo
               fontWeight: 800,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
+              mt: 0.5,
             }}
           >
             Portfolio View
