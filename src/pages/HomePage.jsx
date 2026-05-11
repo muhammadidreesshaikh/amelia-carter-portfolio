@@ -166,12 +166,12 @@ export default function HomePage() {
         <Container maxWidth="xl">
           <SectionHeading eyebrow="Skills" title="An expansive toolkit, refined for branding, motion, and content creation." description="Each skill is represented as a crafted visual bar to show depth, precision, and consistency across creative disciplines." />
 
-          <Grid container spacing={2.5} sx={{ mt: 1 }}>
+          <Grid container spacing={2.5} sx={{ mt: 4 }}>
             {skillGroups.map((skill, index) => (
               <Grid item xs={12} sm={6} lg={4} key={skill.name}>
                 <Card component={motion.div} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -8 }} transition={{ duration: 0.45, delay: index * 0.03 }} viewport={{ once: true }} sx={{ p: 0, height: '100%', borderRadius: 4, border: '1px solid rgba(255,255,255,0.08)', background: 'linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025))', backdropFilter: 'blur(16px)' }}>
-                  <CardContent sx={{ p: 3 }}>
-                    <Stack direction="row" justifyContent="space-between" alignItems="center">
+                  <CardContent sx={{ paddingX: 5, paddingY: 2 }}>
+                    <Stack direction="row" justifyContent="space-between" alignItems="center" gap={3}>
                       <Typography sx={{ fontWeight: 800 }}>{skill.name}</Typography>
                       <Typography sx={{ color: 'secondary.light', fontWeight: 800 }}>{skill.level}%</Typography>
                     </Stack>
@@ -188,11 +188,14 @@ export default function HomePage() {
         <Container maxWidth="xl">
           <SectionHeading eyebrow="Portfolio" title="Some past projects crafted for strong identity, motion, and visual engagement." description="Click a project card to enter a dedicated portfolio page for that category." />
 
-          <Grid container spacing={3.5} sx={{ mt: 1 }}>
+          <Grid container spacing={2} sx={{ mt: 4 }}>
             {projectHighlights.map((project) => (
-              <Grid item xs={12} lg={4} key={project.title}>
-                <ProjectCard {...project} />
-              </Grid>
+              <Grid
+          size={{ xs: 12, sm: 6, md: 4 }}
+          key={project.title}
+        >
+          <ProjectCard {...project} />
+        </Grid>
             ))}
           </Grid>
         </Container>
@@ -209,7 +212,7 @@ export default function HomePage() {
 
       <AnimatedSection id="contact">
         <Container maxWidth="xl">
-          <Box sx={{ position: 'relative', overflow: 'hidden', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'linear-gradient(135deg, rgba(255,122,168,0.14), rgba(255,255,255,0.04) 32%, rgba(96,230,217,0.12))', backdropFilter: 'blur(24px)', p: { xs: 3, md: 5 } }}>
+          <Box sx={{ position: 'relative', overflow: 'hidden', borderRadius: 1, border: '1px solid rgba(255,255,255,0.08)', background: 'linear-gradient(135deg, rgba(255,122,168,0.14), rgba(255,255,255,0.04) 32%, rgba(96,230,217,0.12))', backdropFilter: 'blur(24px)', p: { xs: 3, md: 5 } }}>
             <Box sx={{ position: 'absolute', inset: 'auto -8% -12% auto', width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,122,168,0.36), transparent 68%)', filter: 'blur(16px)' }} />
 
             <Grid container spacing={4} alignItems="flex-start" sx={{ position: 'relative', zIndex: 1 }}>
@@ -226,7 +229,7 @@ export default function HomePage() {
                 </Stack>
               </Grid>
 
-              <Grid item xs={12} md={7}>
+              {/* <Grid item xs={12} md={7}>
                 <Card sx={{ borderRadius: 5, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(8,16,27,0.68)', backdropFilter: 'blur(20px)' }}>
                   <CardContent sx={{ p: { xs: 3, md: 4 } }}>
                     <Box component="form" onSubmit={(event) => { event.preventDefault(); setSubmitted(true); }} sx={{ display: 'grid', gap: 2 }}>
@@ -250,7 +253,7 @@ export default function HomePage() {
                     </Box>
                   </CardContent>
                 </Card>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Box>
         </Container>

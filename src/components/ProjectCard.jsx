@@ -13,12 +13,17 @@ export default function ProjectCard({ title, description, image, to, accent, glo
       sx={{
         position: 'relative',
         overflow: 'hidden',
-        borderRadius: 5,
+        borderRadius: 1,
         border: '1px solid rgba(255,255,255,0.08)',
         background: 'rgba(8,16,27,0.85)',
         boxShadow: '0 24px 70px rgba(0,0,0,0.4)',
-        minHeight: { xs: 320, md: 420 },
         p: 0.5,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        boxSizing: 'border-box',
+        minWidth: 0,
       }}
     >
       <Box component={RouterLink} to={to} sx={{ display: 'block', height: '100%', color: 'inherit' }}>
@@ -51,9 +56,9 @@ export default function ProjectCard({ title, description, image, to, accent, glo
             zIndex: 1,
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'flex-end',
-            height: '100%',
-            p: { xs: 3.5, md: 4.5 },
+            alignItems: 'flex-start',
+            p: { xs: 3, md: 3.5 },
+            flex: 1,
           }}
         >
           <Box
