@@ -1,4 +1,11 @@
 import { createProjectPlaceholder } from "../utils/placeholders";
+import img1 from "../img/1.png";
+import img2 from "../img/2.png";
+import img3 from "../img/3.png";
+import img4 from "../img/4.png";
+import img5 from "../img/5.png";
+import img6 from "../img/6.png";
+import img7 from "../img/7.png";
 
 const accentPairs = [
   ["#ff7aa8", "#60e6d9"],
@@ -69,6 +76,30 @@ function buildCategory(
   };
 }
 
+function buildLogosBlannersCategory() {
+  const realImages = [img1, img2, img3, img4, img5, img6, img7];
+  const accent = accentPairs[0][0];
+  const glow = accentPairs[0][1];
+  
+  const projects = realImages.map((image, index) => ({
+    title: `Click To View ${index + 1}`,
+    category: "Identity",
+    image,
+    accent,
+    subtitle: "Brand Direction",
+  }));
+
+  return {
+    slug: "logos-banners",
+    title: "Logos/Banners",
+    subtitle: "Identity",
+    description: "Precision-crafted logo suites, visual identities, and banner designs that feel premium across every touchpoint.",
+    accent,
+    glow,
+    projects,
+  };
+}
+
 export const projectHighlights = [
   {
     title: "Logos/Banners",
@@ -115,15 +146,7 @@ export const projectHighlights = [
 ];
 
 export const categoryProjects = {
-  "logos-banners": buildCategory(
-    "Logos/Banners",
-    "logos-banners",
-    "Precision-crafted logo suites, visual identities, and banner designs that feel premium across every touchpoint.",
-    accentPairs[0][0],
-    accentPairs[0][1],
-    "Brand Direction",
-    "Identity",
-  ),
+  "logos-banners": buildLogosBlannersCategory(),
   models: buildCategory(
     "Models",
     "models",
