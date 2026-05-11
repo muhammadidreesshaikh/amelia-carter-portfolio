@@ -16,23 +16,21 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (location.hash) {
-      const targetId = location.hash.replace('#', '');
-      requestAnimationFrame(() => {
-        const targetElement = document.getElementById(targetId);
+    const scrollTarget = location.state?.scrollTo;
+
+    requestAnimationFrame(() => {
+      if (scrollTarget) {
+        const targetElement = document.getElementById(scrollTarget);
 
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
           return;
         }
+      }
 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-      return;
-    }
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [location.pathname, location.hash]);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }, [location.key, location.pathname, location.state]);
 
   return (
     <Layout>

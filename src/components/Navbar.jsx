@@ -88,7 +88,7 @@ export default function Navbar() {
           >
             Creative Portfolio
           </Box>
-          <Button variant="contained" component={RouterLink} to="/#contact" size="small">
+          <Button variant="contained" component={RouterLink} to="/" state={{ scrollTo: 'contact' }} size="small">
             Contact
           </Button>
         </Stack>
@@ -143,7 +143,7 @@ export default function Navbar() {
 
           <Divider sx={{ my: 3, borderColor: 'rgba(255,255,255,0.08)' }} />
 
-          <Button variant="contained" fullWidth component={RouterLink} to="/#contact" onClick={() => setDrawerOpen(false)}>
+          <Button variant="contained" fullWidth component={RouterLink} to="/" state={{ scrollTo: 'contact' }} onClick={() => setDrawerOpen(false)}>
             Let’s Build Your Business Together
           </Button>
         </Box>

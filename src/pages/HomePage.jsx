@@ -97,6 +97,14 @@ export default function HomePage() {
   const [submitted, setSubmitted] = useState(false);
   const skillGroups = useMemo(() => skills, []);
 
+  const scrollToSection = (sectionId) => {
+    const targetElement = document.getElementById(sectionId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <>
       <Seo
@@ -161,12 +169,12 @@ export default function HomePage() {
                   <Button
                     variant="contained"
                     size="large"
-                    href="#work"
+                    onClick={() => scrollToSection('work')}
                     endIcon={<ArrowForwardRounded />}
                   >
                     View My Work
                   </Button>
-                  <Button variant="outlined" size="large" href="#contact">
+                  <Button variant="outlined" size="large" onClick={() => scrollToSection('contact')}>
                     Contact Me
                   </Button>
                 </Stack>
