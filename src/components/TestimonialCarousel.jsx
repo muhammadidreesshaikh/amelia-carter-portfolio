@@ -21,7 +21,7 @@ export default function TestimonialCarousel({ testimonials }) {
     <Box sx={{ display: 'grid', gap: 3 }}>
       <Card
         sx={{
-          borderRadius: 5,
+          borderRadius: 1,
           border: '1px solid rgba(255,255,255,0.1)',
           background: 'linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03))',
           backdropFilter: 'blur(24px)',
@@ -44,7 +44,7 @@ export default function TestimonialCarousel({ testimonials }) {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.45 }}
             >
-              <Typography variant="h4" sx={{ fontSize: { xs: 28, md: 38 }, lineHeight: 1.25 }}>
+              <Typography variant="h4" sx={{ fontSize: { xs: 16, md: 20 }, lineHeight: 1.25 }}>
                 “{current.quote}”
               </Typography>
               <Stack sx={{ mt: 3 }}>
@@ -56,7 +56,7 @@ export default function TestimonialCarousel({ testimonials }) {
         </CardContent>
       </Card>
 
-      <Box sx={{ display: 'grid', gap: 1.2, gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' } }}>
+      <Box sx={{ display: 'grid', gap: 1.2, gridTemplateColumns: { xs: '1fr', md: 'repeat(6, 1fr)' } }}>
         {testimonials.map((testimonial, index) => (
           <Box
             key={testimonial.name}
@@ -66,7 +66,7 @@ export default function TestimonialCarousel({ testimonials }) {
             sx={{
               cursor: 'pointer',
               p: 2.6,
-              borderRadius: 4,
+              borderRadius: 1,
               border: '1px solid rgba(255,255,255,0.08)',
               background: active === index ? alpha('#ff7aa8', 0.12) : alpha('#ffffff', 0.04),
             }}
