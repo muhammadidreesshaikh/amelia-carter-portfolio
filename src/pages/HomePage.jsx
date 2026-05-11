@@ -25,6 +25,7 @@ import SectionHeading from '../components/SectionHeading';
 import ProjectCard from '../components/ProjectCard';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import { counters, heroCopy, projectHighlights, socialLinks, skills, testimonials } from '../data/portfolioData';
+import profileImg from '../img/dsaf.jpeg';
 
 const floatingVariants = {
   initial: { opacity: 0, scale: 0.8, y: 20 },
@@ -36,50 +37,50 @@ const floatingVariants = {
   }),
 };
 
-function HeroVisual() {
-  return (
-    <Box sx={{ position: 'relative', minHeight: { xs: 420, md: 640 }, borderRadius: 8, border: '1px solid rgba(255,255,255,0.1)', background: 'linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))', backdropFilter: 'blur(24px)', boxShadow: '0 30px 120px rgba(0,0,0,0.45)', overflow: 'hidden', p: { xs: 1.5, md: 2.5 } }}>
-      <Box component={motion.div} animate={{ y: [0, -16, 0] }} transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }} sx={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 30% 30%, rgba(255,122,168,0.3), transparent 26%), radial-gradient(circle at 80% 15%, rgba(96,230,217,0.22), transparent 24%), linear-gradient(180deg, rgba(10,17,29,0.3), rgba(5,10,17,0.9))' }} />
-      <Box sx={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px)', backgroundSize: '48px 48px', opacity: 0.35 }} />
+// function HeroVisual() {
+//   return (
+//     <Box sx={{ position: 'relative', minHeight: { xs: 420, md: 640 }, borderRadius: 8, border: '1px solid rgba(255,255,255,0.1)', background: 'linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))', backdropFilter: 'blur(24px)', boxShadow: '0 30px 120px rgba(0,0,0,0.45)', overflow: 'hidden' }}>
+//       <Box component={motion.div} animate={{ y: [0, -16, 0] }} transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }} sx={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 30% 30%, rgba(255,122,168,0.3), transparent 26%), radial-gradient(circle at 80% 15%, rgba(96,230,217,0.22), transparent 24%), linear-gradient(180deg, rgba(10,17,29,0.3), rgba(5,10,17,0.9))' }} />
+//       <Box sx={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px)', backgroundSize: '48px 48px', opacity: 0.35 }} />
 
-      <Box sx={{ position: 'relative', zIndex: 1, height: '100%', p: { xs: 2.5, md: 4 } }}>
-        <Stack spacing={2} sx={{ height: '100%', justifyContent: 'space-between' }}>
-          <Paper elevation={0} sx={{ width: 'fit-content', px: 2, py: 1, borderRadius: 999, border: '1px solid rgba(255,255,255,0.1)', backgroundColor: alpha('#ffffff', 0.05) }}>
-            <Typography variant="caption" sx={{ letterSpacing: '0.2em', textTransform: 'uppercase', color: 'secondary.light' }}>
-              Available for freelance work
-            </Typography>
-          </Paper>
+//       <Box sx={{ position: 'relative', zIndex: 1, height: '100%', p: { xs: 2.5, md: 4 } }}>
+//         <Stack spacing={2} sx={{ height: '100%', justifyContent: 'space-between' }}>
+//           <Paper elevation={0} sx={{ width: 'fit-content', px: 2, py: 1, borderRadius: 999, border: '1px solid rgba(255,255,255,0.1)', backgroundColor: alpha('#ffffff', 0.05) }}>
+//             <Typography variant="caption" sx={{ letterSpacing: '0.2em', textTransform: 'uppercase', color: 'secondary.light' }}>
+//               Available for freelance work
+//             </Typography>
+//           </Paper>
 
-          <Box sx={{ position: 'relative', alignSelf: 'center', width: { xs: 240, md: 340 }, mt: { xs: 1, md: 2 } }}>
-            <Box component={motion.div} animate={{ rotate: [0, 2, 0, -2, 0] }} transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }} sx={{ position: 'relative', width: '100%', borderRadius: '50%', aspectRatio: '1 / 1', background: 'radial-gradient(circle at 35% 30%, rgba(255,255,255,0.28), transparent 18%), linear-gradient(145deg, rgba(255,122,168,0.8), rgba(96,230,217,0.45))', boxShadow: '0 0 80px rgba(255,122,168,0.24)', overflow: 'hidden' }}>
-              <Box sx={{ position: 'absolute', inset: 18, borderRadius: '50%', background: 'linear-gradient(180deg, rgba(9,17,30,0.2), rgba(9,17,30,0.72)), radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 25%)', border: '1px solid rgba(255,255,255,0.12)', display: 'grid', placeItems: 'center', p: 2 }}>
-                <Typography variant="h3" sx={{ fontSize: { xs: 46, md: 62 }, textAlign: 'center' }}>
-                  Amelia
-                </Typography>
-              </Box>
-            </Box>
+//           <Box sx={{ position: 'relative', alignSelf: 'center', width: { xs: 240, md: 340 }, mt: { xs: 1, md: 2 } }}>
+//             <Box component={motion.div} animate={{ rotate: [0, 2, 0, -2, 0] }} transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }} sx={{ position: 'relative', width: '100%', borderRadius: '50%', aspectRatio: '1 / 1', background: 'radial-gradient(circle at 35% 30%, rgba(255,255,255,0.28), transparent 18%), linear-gradient(145deg, rgba(255,122,168,0.8), rgba(96,230,217,0.45))', boxShadow: '0 0 80px rgba(255,122,168,0.24)', overflow: 'hidden' }}>
+//               <Box sx={{ position: 'absolute', inset: 14, borderRadius: '50%', background: 'linear-gradient(180deg, rgba(9,17,30,0.2), rgba(9,17,30,0.72)), radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 25%)', border: '1px solid rgba(255,255,255,0.12)', display: 'grid', placeItems: 'center' }}>
+//                 <Typography variant="h3" sx={{ fontSize: { xs: 46, md: 62 }, textAlign: 'center' }}>
+//                   Amelia
+//                 </Typography>
+//               </Box>
+//             </Box>
 
-            <Box component={motion.div} variants={floatingVariants} initial="initial" animate="animate" custom={0.2} sx={{ position: 'absolute', right: -10, top: 22, px: 2, py: 1.2, borderRadius: 4, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(8,16,27,0.76)', backdropFilter: 'blur(18px)' }}>
-              <Typography sx={{ fontWeight: 800 }}>Motion-ready identity</Typography>
-              <Typography variant="body2" sx={{ color: 'text.secondary' }}>Elegant, playful, precise</Typography>
-            </Box>
+//             <Box component={motion.div} variants={floatingVariants} initial="initial" animate="animate" custom={0.2} sx={{ position: 'absolute', right: -10, top: 22, px: 2, py: 1.2, borderRadius: 4, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(8,16,27,0.76)', backdropFilter: 'blur(18px)' }}>
+//               <Typography sx={{ fontWeight: 800 }}>Motion-ready identity</Typography>
+//               <Typography variant="body2" sx={{ color: 'text.secondary' }}>Elegant, playful, precise</Typography>
+//             </Box>
 
-            <Box component={motion.div} variants={floatingVariants} initial="initial" animate="animate" custom={0.45} sx={{ position: 'absolute', left: -6, bottom: 24, px: 2.2, py: 1.2, borderRadius: 4, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(8,16,27,0.76)', backdropFilter: 'blur(18px)' }}>
-              <Typography sx={{ fontWeight: 800 }}>100+ brand stories</Typography>
-              <Typography variant="body2" sx={{ color: 'text.secondary' }}>Logos, banners, and animations</Typography>
-            </Box>
-          </Box>
+//             <Box component={motion.div} variants={floatingVariants} initial="initial" animate="animate" custom={0.45} sx={{ position: 'absolute', left: -6, bottom: 24, px: 2.2, py: 1.2, borderRadius: 4, border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(8,16,27,0.76)', backdropFilter: 'blur(18px)' }}>
+//               <Typography sx={{ fontWeight: 800 }}>100+ brand stories</Typography>
+//               <Typography variant="body2" sx={{ color: 'text.secondary' }}>Logos, banners, and animations</Typography>
+//             </Box>
+//           </Box>
 
-          <Stack direction="row" spacing={1.2} sx={{ flexWrap: 'wrap' }}>
-            {['Branding', 'Motion Graphics', 'Thumbnails', 'Illustration'].map((tag) => (
-              <Chip key={tag} label={tag} sx={{ backgroundColor: alpha('#ffffff', 0.05), border: '1px solid rgba(255,255,255,0.1)', color: 'text.primary' }} />
-            ))}
-          </Stack>
-        </Stack>
-      </Box>
-    </Box>
-  );
-}
+//           <Stack direction="row" spacing={1.2} sx={{ flexWrap: 'wrap' }}>
+//             {['Branding', 'Motion Graphics', 'Thumbnails', 'Illustration'].map((tag) => (
+//               <Chip key={tag} label={tag} sx={{ backgroundColor: alpha('#ffffff', 0.05), border: '1px solid rgba(255,255,255,0.1)', color: 'text.primary' }} />
+//             ))}
+//           </Stack>
+//         </Stack>
+//       </Box>
+//     </Box>
+//   );
+// }
 
 export default function HomePage() {
   const [submitted, setSubmitted] = useState(false);
@@ -95,46 +96,48 @@ export default function HomePage() {
       <Box component="section" sx={{ position: 'relative', minHeight: { xs: 'auto', md: 'calc(100vh - 88px)' }, py: { xs: 8, md: 12 } }}>
         <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} lg={6}>
-              <Stack spacing={3}>
-                <Box component={motion.div} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} sx={{ width: 'fit-content', px: 2, py: 1, borderRadius: 999, border: '1px solid rgba(255,255,255,0.1)', backgroundColor: alpha('#ffffff', 0.04), color: 'secondary.light', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: 12, fontWeight: 800 }}>
-                  {heroCopy.eyebrow}
-                </Box>
+              <Grid item xs={12} lg={6}>
+                <Stack spacing={3}>
+                  <Box component={motion.div} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} sx={{ width: 'fit-content', px: 2, py: 1, borderRadius: 999, border: '1px solid rgba(255,255,255,0.1)', backgroundColor: alpha('#ffffff', 0.04), color: 'secondary.light', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: 12, fontWeight: 800 }}>
+                    {heroCopy.eyebrow}
+                  </Box>
 
-                <Typography variant="h1" sx={{ fontSize: { xs: 54, sm: 74, md: 96 } }}>{heroCopy.headline}</Typography>
+                  <Typography variant="h1" sx={{ fontSize: { xs: 60, sm: 80, md: 120 } }}>{heroCopy.headline}</Typography>
 
-                <Typography variant="body1" sx={{ color: 'text.secondary', fontSize: { xs: 16, md: 18 }, lineHeight: 1.9, maxWidth: 720 }}>{heroCopy.description}</Typography>
+                  <Typography variant="body1" sx={{ color: 'text.secondary', fontSize: { xs: 16, md: 18 }, lineHeight: 1.9, maxWidth: 800 }}>{heroCopy.description}</Typography>
 
-                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-                  <Button variant="contained" size="large" href="#work" endIcon={<ArrowForwardRounded />}>View My Work</Button>
-                  <Button variant="outlined" size="large" href="#contact">Contact Me</Button>
+                  <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+                    <Button variant="contained" size="large" href="#work" endIcon={<ArrowForwardRounded />}>View My Work</Button>
+                    <Button variant="outlined" size="large" href="#contact">Contact Me</Button>
+                  </Stack>
                 </Stack>
+              </Grid>
 
-                {/* <Stack direction="row" spacing={1.4} sx={{ flexWrap: 'wrap', pt: 1 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: 'text.secondary' }}>
-                    <EmailRounded fontSize="small" /> hello@ameliacarter.design
-                  </Box>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: 'text.secondary' }}>
-                    <Instagram fontSize="small" /> @ameliacarterart
-                  </Box>
-                </Stack> */}
-              </Stack>
-            </Grid>
-
-            <Grid item xs={12} lg={6}>
+            {/* <Grid item xs={12} lg={6}>
               <HeroVisual />
-            </Grid>
+            </Grid> */}
+
           </Grid>
         </Container>
       </Box>
 
       <AnimatedSection>
         <Container maxWidth="xl">
-          <Grid container spacing={4} alignItems="center">
+          <Grid container spacing={10} alignItems="center">
             <Grid item xs={12} md={5}>
-              <Box sx={{ minHeight: 520, borderRadius: 8, overflow: 'hidden', position: 'relative', border: '1px solid rgba(255,255,255,0.1)', background: 'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)), radial-gradient(circle at top, rgba(255,122,168,0.22), transparent 35%)', display: 'grid', placeItems: 'center' }}>
-                <Box sx={{ p: { xs: 2, md: 3 }, borderRadius: '50%', background: 'rgba(255,255,255,0.03)' }}>
-                  <Avatar alt="Amelia Carter placeholder" sx={{ width: { xs: 220, md: 300 }, height: { xs: 220, md: 300 }, bgcolor: 'transparent', border: '1px solid rgba(255,255,255,0.1)', background: 'radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), transparent 18%), linear-gradient(135deg, rgba(255,122,168,0.9), rgba(96,230,217,0.45))', boxShadow: '0 24px 90px rgba(0,0,0,0.4)', fontSize: 80, fontWeight: 900 }}>AC</Avatar>
+              <Box sx={{ borderRadius: '50%', overflow: 'hidden', position: 'relative', border: '1px solid rgba(255,255,255,0.1)', background: 'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)), radial-gradient(circle at top, rgba(255,122,168,0.22), transparent 35%)', display: 'grid', placeItems: 'center' }}>
+                <Box sx={{ p: { xs: 2, md: 3 }, display: 'grid', placeItems: 'center' }}>
+                  {(heroCopy.profileImage || profileImg || projectHighlights?.[0]?.image) ? (
+                    <Box
+                      component="img"
+                      src={heroCopy.profileImage || profileImg || projectHighlights[0].image}
+                      alt="Amelia Carter"
+                      sx={{ width: { xs: 300, md: 350 }, height: { xs: 300, md: 350 }, objectFit: 'cover', border: '4px solid rgba(10, 225, 233, 0.84)', borderRadius: '50%', }}
+                    //   sx={{ width: { xs: 220, md: 300 }, height: { xs: 220, md: 300 }, objectFit: 'cover', border: '4px solid rgba(10, 225, 233, 0.84)', borderRadius: '50%', }}
+                    />
+                  ) : (
+                    <Avatar alt="Amelia Carter placeholder" sx={{ width: { xs: 220, md: 300 }, height: { xs: 220, md: 300 }, bgcolor: 'transparent', border: '1px solid rgba(255,255,255,0.1)', background: 'radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), transparent 18%), linear-gradient(135deg, rgba(255,122,168,0.9), rgba(96,230,217,0.45))', boxShadow: '0 24px 90px rgba(0,0,0,0.4)', fontSize: 80, fontWeight: 900 }}>AC</Avatar>
+                  )}
                 </Box>
               </Box>
             </Grid>
@@ -142,10 +145,10 @@ export default function HomePage() {
             <Grid item xs={12} md={7}>
               <SectionHeading eyebrow="About" title="A creative partner for brands that want visual identity with depth." description="I blend graphic design, motion, and storytelling to create high-end visuals that feel refined, feminine, and memorable. Every asset is designed to elevate a brand’s presence across digital and social channels." />
 
-              <Grid container spacing={2.2} sx={{ mt: 1 }}>
+              <Grid container spacing={2.2} sx={{ mt: 4 }}>
                 {counters.map((counter, index) => (
                   <Grid item xs={12} sm={4} key={counter.label}>
-                    <Card component={motion.div} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: index * 0.1 }} viewport={{ once: true }} sx={{ p: 0, borderRadius: 4, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(18px)' }}>
+                    <Card component={motion.div} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: index * 0.1 }} viewport={{ once: true }} sx={{ p: 0, borderRadius: 1, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(18px)' }}>
                       <CardContent sx={{ p: 3 }}>
                         <Typography variant="h3" sx={{ fontSize: 42 }}>{counter.value}</Typography>
                         <Typography sx={{ color: 'text.secondary', mt: 1 }}>{counter.label}</Typography>

@@ -8,7 +8,7 @@ const accentPairs = [
 
 export const heroCopy = {
   eyebrow: 'Graphic Designer & Animator',
-  headline: 'Elegant visuals with motion that makes brands feel unforgettable.',
+  headline: 'Amelia Carter.',
   description:
     'I’m a freelance graphic designer and animator with 7+ years of professional industry experience. I specialize in creating modern, impactful, and visually engaging designs for brands and businesses. From unique logo designs to high-quality animations, I help brands build a strong visual identity.',
 };
