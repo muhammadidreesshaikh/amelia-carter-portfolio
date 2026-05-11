@@ -10,7 +10,7 @@ export const heroCopy = {
   eyebrow: "Graphic Designer & Animator",
   headline: "Amelia Carter.",
   description:
-    "I’m a freelance graphic designer and animator with 7+ years of professional industry experience. I specialize in creating modern, impactful, and visually engaging designs for brands and businesses. From unique logo designs to high-quality animations, I help brands build a strong visual identity.",
+    "I’m a freelance graphic designer and animator with 7+ years of professional industry experience. I specialize in creating modern, impactful, and visually engaging designs for brands and businesses. From unique logo designs to high-quality animations, I help brands build a strong visual identity. My work focuses on creativity, storytelling, and delivering visuals that connect with audiences. My goal is to create professional and creative designs that help brands stand out and leave a lasting impression.",
 };
 
 export const counters = [
@@ -210,12 +210,13 @@ export const testimonials = [
     role: "Founder, Glow Studio",
     quote:
       "The project delivery was fast, the communication was smooth, and the final visuals looked premium from every angle.",
-  }
+  },
 ];
 
 export const socialLinks = [
-  { label: "Email", value: "hello@ameliacarter.design" },
-  { label: "Instagram", value: "@ameliacarterart" },
-  { label: "Behance", value: "behance.net/ameliacarter" },
-  { label: "WhatsApp", value: "+1 (555) 014-2211" },
+  { label: "Email", url: "mailto:hello@ameliacarter.design" },
+  { label: "Instagram", url: "https://instagram.com/ameliacarterart" },
+  { label: "WhatsApp", url: "https://wa.me/15550142211" },
+  { label: "Discord", url: "https://discord.com/users/ameliacarter" },
+  { label: "Twitter", url: "https://x.com/ameliacarterart" },
 ];

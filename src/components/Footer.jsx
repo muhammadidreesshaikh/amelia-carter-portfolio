@@ -14,7 +14,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ py: 5, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+    <Box component="footer" sx={{ py: 3, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
       <Container maxWidth="xl">
         <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="space-between" alignItems={{ xs: 'flex-start', md: 'center' }}>
           <Box>
@@ -26,30 +26,10 @@ export default function Footer() {
             </Typography>
           </Box>
 
-          <Stack direction="row" spacing={1}>
-            {socials.map((social) => (
-              <IconButton
-                key={social.label}
-                sx={{
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  backgroundColor: alpha('#ffffff', 0.03),
-                  transition: 'transform 0.25s ease, background-color 0.25s ease',
-                  '&:hover': {
-                    transform: 'translateY(-3px)',
-                    backgroundColor: alpha('#ff7aa8', 0.15),
-                  },
-                }}
-                aria-label={social.label}
-              >
-                {social.icon}
-              </IconButton>
-            ))}
-          </Stack>
-        </Stack>
-
-        <Typography sx={{ mt: 4, color: 'text.secondary' }}>
+          <Typography sx={{ color: 'text.secondary' }}>
           © {new Date().getFullYear()} Amelia Carter. All rights reserved.
         </Typography>
+        </Stack>
       </Container>
     </Box>
   );
