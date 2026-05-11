@@ -16,8 +16,23 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '');
+      requestAnimationFrame(() => {
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      return;
+    }
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   return (
     <Layout>

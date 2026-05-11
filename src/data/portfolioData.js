@@ -15,6 +15,18 @@ import img13 from "../img/13.png";
 import img14 from "../img/14.png";
 import img15 from "../img/15.png";
 import img16 from "../img/16.png";
+import img17 from "../img/17.png";
+import img18 from "../img/18.png";
+import img19 from "../img/19.png";
+import img20 from "../img/20.png";
+import img21 from "../img/21.png";
+import img22 from "../img/22.png";
+import img23 from "../img/23.png";
+import img24 from "../img/24.png";
+import img25 from "../img/25.png";
+import img26 from "../img/26.png";
+import img27 from "../img/27.png";
+import img28 from "../img/28.png";
 
 const accentPairs = [
   ["#ff7aa8", "#60e6d9"],
@@ -122,6 +134,56 @@ function buildLogosBlannersCategory() {
   };
 }
 
+function buildModelsCategory() {
+  const modelImages = [img17, img18, img19, img20, img21];
+  const accent = accentPairs[1][0];
+  const glow = accentPairs[1][1];
+
+  const projects = modelImages.map((image, index) => ({
+    title: `Click To View ${index + 17}`,
+    category: "Campaign",
+    image,
+    accent,
+    subtitle: "Visual Story",
+    layout: "grid",
+  }));
+
+  return {
+    slug: "models",
+    title: "Models",
+    subtitle: "Campaign",
+    description: "Showcase visuals for fashion, product, and promo campaigns designed to look cinematic and modern.",
+    accent,
+    glow,
+    projects,
+  };
+}
+
+function buildBackgroundsThumbnailsCategory() {
+  const bannerImages = [img22, img23, img24, img25, img26, img27, img28];
+  const accent = accentPairs[2][0];
+  const glow = accentPairs[2][1];
+
+  const projects = bannerImages.map((image, index) => ({
+    title: `Click To View ${index + 22}`,
+    category: "Thumbnail",
+    image,
+    accent,
+    subtitle: "Click Energy",
+    layout: "banner",
+  }));
+
+  return {
+    slug: "backgrounds-thumbnails",
+    title: "Backgrounds and Thumbnails",
+    subtitle: "Thumbnail",
+    description: "High-performance thumbnails and immersive backgrounds optimized for strong first impressions and engagement.",
+    accent,
+    glow,
+    projects,
+  };
+}
+
 export const projectHighlights = [
   {
     title: "Logos/Banners",
@@ -169,24 +231,8 @@ export const projectHighlights = [
 
 export const categoryProjects = {
   "logos-banners": buildLogosBlannersCategory(),
-  models: buildCategory(
-    "Models",
-    "models",
-    "Showcase visuals for fashion, product, and promo campaigns designed to look cinematic and modern.",
-    accentPairs[1][0],
-    accentPairs[1][1],
-    "Visual Story",
-    "Campaign",
-  ),
-  "backgrounds-thumbnails": buildCategory(
-    "Backgrounds and Thumbnails",
-    "backgrounds-thumbnails",
-    "High-performance thumbnails and immersive backgrounds optimized for strong first impressions and engagement.",
-    accentPairs[2][0],
-    accentPairs[2][1],
-    "Click Energy",
-    "Thumbnail",
-  ),
+  models: buildModelsCategory(),
+  "backgrounds-thumbnails": buildBackgroundsThumbnailsCategory(),
 };
 
 export const testimonials = [
