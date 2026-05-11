@@ -4,6 +4,7 @@ import WhatsApp from '@mui/icons-material/WhatsApp';
 import EmailRounded from '@mui/icons-material/EmailRounded';
 import WorkOutlineRounded from '@mui/icons-material/WorkOutlineRounded';
 import { alpha } from '@mui/material/styles';
+import { Link as RouterLink } from 'react-router-dom';
 
 const socials = [
   { icon: <EmailRounded />, label: 'Email' },
@@ -17,7 +18,7 @@ export default function Footer() {
     <Box component="footer" sx={{ py: 3, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
       <Container maxWidth="xl">
         <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="space-between" alignItems={{ xs: 'flex-start', md: 'center' }}>
-          <Box>
+          <Box component={RouterLink} to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
             <Typography variant="h6" sx={{ fontWeight: 900, letterSpacing: '0.14em' }}>
               AMELIA CARTER
             </Typography>

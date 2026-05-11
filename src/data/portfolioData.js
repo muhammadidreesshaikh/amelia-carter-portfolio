@@ -6,6 +6,15 @@ import img4 from "../img/4.png";
 import img5 from "../img/5.png";
 import img6 from "../img/6.png";
 import img7 from "../img/7.png";
+import img8 from "../img/8.png";
+import img9 from "../img/9.png";
+import img10 from "../img/10.png";
+import img11 from "../img/11.png";
+import img12 from "../img/12.png";
+import img13 from "../img/13.png";
+import img14 from "../img/14.png";
+import img15 from "../img/15.png";
+import img16 from "../img/16.png";
 
 const accentPairs = [
   ["#ff7aa8", "#60e6d9"],
@@ -77,17 +86,30 @@ function buildCategory(
 }
 
 function buildLogosBlannersCategory() {
-  const realImages = [img1, img2, img3, img4, img5, img6, img7];
+  const gridImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11];
+  const bannerImages = [img12, img13, img14, img15, img16];
   const accent = accentPairs[0][0];
   const glow = accentPairs[0][1];
-  
-  const projects = realImages.map((image, index) => ({
+
+  const gridProjects = gridImages.map((image, index) => ({
     title: `Click To View ${index + 1}`,
     category: "Identity",
     image,
     accent,
     subtitle: "Brand Direction",
+    layout: "grid",
   }));
+
+  const bannerProjects = bannerImages.map((image, index) => ({
+    title: `Click To View ${index + 12}`,
+    category: "Identity",
+    image,
+    accent,
+    subtitle: "Banner Direction",
+    layout: "banner",
+  }));
+
+  const projects = [...gridProjects, ...bannerProjects];
 
   return {
     slug: "logos-banners",

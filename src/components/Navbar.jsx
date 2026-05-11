@@ -19,6 +19,7 @@ import CloseRounded from '@mui/icons-material/CloseRounded';
 import EmailRounded from '@mui/icons-material/EmailRounded';
 import Instagram from '@mui/icons-material/Instagram';
 import WhatsApp from '@mui/icons-material/WhatsApp';
+import { Link as RouterLink } from 'react-router-dom';
 
 const quickLinks = [
   { label: 'Email', value: 'hello@ameliacarter.design', icon: <EmailRounded fontSize="small" /> },
@@ -40,7 +41,18 @@ export default function Navbar() {
       }}
     >
       <Toolbar sx={{ minHeight: { xs: 74, md: 86 }, px: { xs: 2, md: 4 } }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.4, flexGrow: 1 }}>
+        <Box
+          component={RouterLink}
+          to="/"
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 1.4,
+            flexGrow: 1,
+            textDecoration: 'none',
+            color: 'inherit',
+          }}
+        >
           <Box
             sx={{
               width: 42,
