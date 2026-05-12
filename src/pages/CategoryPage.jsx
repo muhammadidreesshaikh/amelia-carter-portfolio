@@ -190,23 +190,23 @@ export default function CategoryPage({ categoryKey }) {
                     >
                       {" "}
                       <Box
-  component="img"
-  src={project.image}
-  alt={project.title}
-  loading="lazy"
-  onLoad={(e) => {
-    e.currentTarget.style.opacity = 1;
-  }}
-  sx={{
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    objectPosition: "center",
-    display: "block",
-    opacity: 1,
-    transition: "opacity 0.3s ease",
-  }}
-/>{" "}
+                        component="img"
+                        src={project.image}
+                        alt={project.title}
+                        loading="lazy"
+                        onLoad={(e) => {
+                          e.currentTarget.style.opacity = 1;
+                        }}
+                        sx={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          objectPosition: "center",
+                          display: "block",
+                          opacity: 1,
+                          transition: "opacity 0.3s ease",
+                        }}
+                      />{" "}
                       <Box
                         sx={{
                           position: "absolute",
@@ -276,8 +276,10 @@ export default function CategoryPage({ categoryKey }) {
                       cursor: "pointer",
                     }}
                   >
-                    <CardActionArea onClick={() => setSelected(project)}
-                      sx={{ height: '100%', display: 'block' }}>
+                    <CardActionArea
+                      onClick={() => setSelected(project)}
+                      sx={{ height: "100%", display: "block" }}
+                    >
                       <Box
                         sx={{
                           position: "relative",
@@ -293,23 +295,23 @@ export default function CategoryPage({ categoryKey }) {
                         }}
                       >
                         <Box
-  component="img"
-  src={project.image}
-  alt={project.title}
-  loading="lazy"
-  onLoad={(e) => {
-    e.currentTarget.style.opacity = 1;
-  }}
-  sx={{
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    objectPosition: "center",
-    display: "block",
-    opacity: 1,
-    transition: "opacity 0.3s ease",
-  }}
-/>
+                          component="img"
+                          src={project.image}
+                          alt={project.title}
+                          loading="lazy"
+                          onLoad={(e) => {
+                            e.currentTarget.style.opacity = 1;
+                          }}
+                          sx={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            objectPosition: "center",
+                            display: "block",
+                            opacity: 1,
+                            transition: "opacity 0.3s ease",
+                          }}
+                        />
                         <Box
                           sx={{
                             position: "absolute",
