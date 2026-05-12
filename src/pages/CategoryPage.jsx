@@ -267,6 +267,7 @@ export default function CategoryPage({ categoryKey }) {
                     component="div"
                     onClick={() => setSelected(project)}
                     sx={{
+                      height: { xs: 180, sm: 240, md: 320 },
                       borderRadius: 1,
                       border: "1px solid rgba(255,255,255,0.08)",
                       background: "rgba(8,16,27,0.78)",
@@ -274,7 +275,8 @@ export default function CategoryPage({ categoryKey }) {
                       cursor: "pointer",
                     }}
                   >
-                    <CardActionArea onClick={() => setSelected(project)}>
+                    <CardActionArea onClick={() => setSelected(project)}
+                      sx={{ height: '100%', display: 'block' }}>
                       <Box
                         sx={{
                           position: "relative",
