@@ -190,22 +190,23 @@ export default function CategoryPage({ categoryKey }) {
                     >
                       {" "}
                       <Box
-                        component="img"
-                        src={project.image}
-                        alt={project.title}
-                        loading="lazy"
-                        sx={{
-                          // position: "absolute",
-                          // inset: 0,
-                          // zIndex: 0,
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          objectPosition: "center",
-                          display: "block",
-                          opacity: 1,
-                        }}
-                      />{" "}
+  component="img"
+  src={project.image}
+  alt={project.title}
+  loading="lazy"
+  onLoad={(e) => {
+    e.currentTarget.style.opacity = 1;
+  }}
+  sx={{
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    display: "block",
+    opacity: 1,
+    transition: "opacity 0.3s ease",
+  }}
+/>{" "}
                       <Box
                         sx={{
                           position: "absolute",
@@ -292,21 +293,23 @@ export default function CategoryPage({ categoryKey }) {
                         }}
                       >
                         <Box
-                          component="img"
-                          src={project.image}
-                          alt={project.title}
-                          loading="eager"
-                          sx={{
-                            // position: "absolute",
-                            // inset: 0,
-                            // zIndex: 0,
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            objectPosition: "center",
-                            display: "block",
-                          }}
-                        />
+  component="img"
+  src={project.image}
+  alt={project.title}
+  loading="lazy"
+  onLoad={(e) => {
+    e.currentTarget.style.opacity = 1;
+  }}
+  sx={{
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    display: "block",
+    opacity: 1,
+    transition: "opacity 0.3s ease",
+  }}
+/>
                         <Box
                           sx={{
                             position: "absolute",
