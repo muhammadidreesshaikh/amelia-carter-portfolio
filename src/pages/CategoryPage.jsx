@@ -58,7 +58,7 @@ export default function CategoryPage({ categoryKey }) {
               <motion.div key={project.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -8 }} transition={{ duration: 0.45, delay: index * 0.04 }} viewport={{ once: true }} style={{ height: '100%' }}>
                 <Card component="div" onClick={() => setSelected(project)} sx={{ borderRadius: 1, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(8,16,27,0.78)', overflow: 'hidden', height: '100%', cursor: 'pointer' }}>
                   <CardActionArea onClick={() => setSelected(project)} sx={{ height: '100%', display: 'flex' }}>
-                    <Box sx={{ position: 'relative', width: '100%', aspectRatio: '4 / 5', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'scroll', transition: 'transform 0.75s ease', '&:hover': { transform: 'scale(1.07)' } }} style={{ backgroundImage: `linear-gradient(180deg, rgba(4,8,15,0.05), rgba(4,8,15,0.72)), url('${project.image}')` }}>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 5', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'scroll', backgroundImage: `linear-gradient(180deg, rgba(4,8,15,0.05), rgba(4,8,15,0.72)), url('${project.image}')`, transition: 'transform 0.75s ease', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.07)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
                     <Box sx={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 32%, ${alpha(project.accent, 0.22)})` }} />
                     <Box sx={{ position: 'absolute', left: 18, right: 18, bottom: 30, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1, px: 2, py: 1.5, borderRadius: 1, backgroundColor: alpha('#000000', 0.72), border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(16px)' }}>
                       <Box>
@@ -66,7 +66,7 @@ export default function CategoryPage({ categoryKey }) {
                       </Box>
                       <ArrowForwardRounded />
                     </Box>
-                  </Box>
+                    </div>
                 </CardActionArea>
               </Card>
               </motion.div>
@@ -79,13 +79,13 @@ export default function CategoryPage({ categoryKey }) {
                 <motion.div key={project.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -5 }} transition={{ duration: 0.45, delay: index * 0.04 }} viewport={{ once: true }} style={{ width: '100%' }}>
                   <Card component="div" onClick={() => setSelected(project)} sx={{ borderRadius: 1, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(8,16,27,0.78)', overflow: 'hidden', cursor: 'pointer' }}>
                     <CardActionArea onClick={() => setSelected(project)}>
-                      <Box sx={{ position: 'relative', width: '100%', aspectRatio: { xs: '16 / 9', md: '21 / 7' }, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'scroll', transition: 'transform 0.75s ease', '&:hover': { transform: 'scale(1.03)' } }} style={{ backgroundImage: `linear-gradient(180deg, rgba(4,8,15,0.08), rgba(4,8,15,0.68)), url('${project.image}')` }}>
+                      <div style={{ position: 'relative', width: '100%', aspectRatio: '21 / 7', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'scroll', backgroundImage: `linear-gradient(180deg, rgba(4,8,15,0.08), rgba(4,8,15,0.68)), url('${project.image}')`, transition: 'transform 0.75s ease', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
                       <Box sx={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 40%, ${alpha(project.accent, 0.24)})` }} />
                       <Box sx={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: 18, width: { xs: '70%', sm: '50%', md: '30%' }, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1, px: 2, py: 1.2, borderRadius: 1, backgroundColor: alpha('#000000', 0.72), border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(16px)' }}>
                         <Typography sx={{ fontWeight: 800, textAlign: 'left' }}>Click To View</Typography>
                         <ArrowForwardRounded fontSize="small" />
                       </Box>
-                    </Box>
+                      </div>
                   </CardActionArea>
                 </Card>                </motion.div>              ))}
             </Box>
