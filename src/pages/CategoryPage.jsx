@@ -310,6 +310,7 @@ export default function CategoryPage({ categoryKey }) {
                             display: "block",
                             opacity: 1,
                             transition: "opacity 0.3s ease",
+                            transform: "translateZ(0)", // 👈 ADD THIS LINE ONLY
                           }}
                         />
                         <Box
@@ -325,8 +326,9 @@ export default function CategoryPage({ categoryKey }) {
                           sx={{
                             position: "absolute",
                             zIndex: 2,
-                            left: "50%",
-                            transform: "translateX(-50%)",
+                            left: 0,
+                            right: 0,
+                            margin: "0 auto",
                             bottom: 18,
                             width: { xs: "70%", sm: "50%", md: "30%" },
                             display: "flex",
