@@ -64,7 +64,7 @@ export default function CategoryPage({ categoryKey }) {
                         src={project.image}
                         alt={project.title}
                         loading="lazy"
-                        sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', padding: 2 }}
+                        sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
                       />
                       <Box sx={{ position: 'absolute', inset: 0, background: `radial-gradient(circle at top, ${alpha(project.accent, 0.2)}, transparent 42%), linear-gradient(180deg, transparent 50%, ${alpha('#040815', 0.78)})` }} />
                       <Box sx={{ position: 'absolute', left: 18, right: 18, bottom: 30, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1, px: 2, py: 1.5, borderRadius: 1, backgroundColor: alpha('#000000', 0.72), border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(16px)' }}>
@@ -92,7 +92,7 @@ export default function CategoryPage({ categoryKey }) {
                           src={project.image}
                           alt={project.title}
                           loading="lazy"
-                          sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', padding: 2 }}
+                          sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
                         />
                         <Box sx={{ position: 'absolute', inset: 0, background: `radial-gradient(circle at top, ${alpha(project.accent, 0.18)}, transparent 42%), linear-gradient(180deg, transparent 58%, ${alpha('#040815', 0.8)})` }} />
                       <Box sx={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: 18, width: { xs: '70%', sm: '50%', md: '30%' }, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1, px: 2, py: 1.2, borderRadius: 1, backgroundColor: alpha('#000000', 0.72), border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(16px)' }}>
