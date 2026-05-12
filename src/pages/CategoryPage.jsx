@@ -195,9 +195,9 @@ export default function CategoryPage({ categoryKey }) {
                         alt={project.title}
                         loading="lazy"
                         sx={{
-                          position: "absolute",
-                          inset: 0,
-                          zIndex: 0,
+                          // position: "absolute",
+                          // inset: 0,
+                          // zIndex: 0,
                           width: "100%",
                           height: "100%",
                           objectFit: "cover",
@@ -295,9 +295,9 @@ export default function CategoryPage({ categoryKey }) {
                           alt={project.title}
                           loading="eager"
                           sx={{
-                            position: "absolute",
-                            inset: 0,
-                            zIndex: 0,
+                            // position: "absolute",
+                            // inset: 0,
+                            // zIndex: 0,
                             width: "100%",
                             height: "100%",
                             objectFit: "cover",
