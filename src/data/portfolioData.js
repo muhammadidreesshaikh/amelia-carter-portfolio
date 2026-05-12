@@ -1,5 +1,5 @@
 import { createProjectPlaceholder } from "../utils/placeholders";
-import img1 from "../img/1.png";
+import img1 from "../img/1.png.png";
 import img2 from "../img/2.png";
 import img3 from "../img/3.png";
 import img4 from "../img/4.png";

@@ -58,15 +58,22 @@ export default function CategoryPage({ categoryKey }) {
               <motion.div key={project.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -8 }} transition={{ duration: 0.45, delay: index * 0.04 }} viewport={{ once: true }} style={{ height: '100%' }}>
                 <Card component="div" onClick={() => setSelected(project)} sx={{ borderRadius: 1, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(8,16,27,0.78)', overflow: 'hidden', height: '100%', cursor: 'pointer' }}>
                   <CardActionArea onClick={() => setSelected(project)} sx={{ height: '100%', display: 'flex' }}>
-                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 5', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'scroll', backgroundImage: `linear-gradient(180deg, rgba(4,8,15,0.05), rgba(4,8,15,0.72)), url('${project.image}')`, transition: 'transform 0.75s ease', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.07)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-                    <Box sx={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 32%, ${alpha(project.accent, 0.22)})` }} />
-                    <Box sx={{ position: 'absolute', left: 18, right: 18, bottom: 30, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1, px: 2, py: 1.5, borderRadius: 1, backgroundColor: alpha('#000000', 0.72), border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(16px)' }}>
+                    <Box sx={{ position: 'relative', width: '100%', aspectRatio: '4 / 5', overflow: 'hidden', cursor: 'pointer', transition: 'transform 0.75s ease', background: 'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.07)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                      <Box
+                        component="img"
+                        src={project.image}
+                        alt={project.title}
+                        loading="lazy"
+                        sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', padding: 2 }}
+                      />
+                      <Box sx={{ position: 'absolute', inset: 0, background: `radial-gradient(circle at top, ${alpha(project.accent, 0.2)}, transparent 42%), linear-gradient(180deg, transparent 50%, ${alpha('#040815', 0.78)})` }} />
+                      <Box sx={{ position: 'absolute', left: 18, right: 18, bottom: 30, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1, px: 2, py: 1.5, borderRadius: 1, backgroundColor: alpha('#000000', 0.72), border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(16px)' }}>
                       <Box>
                         <Typography sx={{ fontWeight: 800 }}>{project.title}</Typography>
                       </Box>
                       <ArrowForwardRounded />
+                      </Box>
                     </Box>
-                    </div>
                 </CardActionArea>
               </Card>
               </motion.div>
@@ -79,13 +86,20 @@ export default function CategoryPage({ categoryKey }) {
                 <motion.div key={project.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -5 }} transition={{ duration: 0.45, delay: index * 0.04 }} viewport={{ once: true }} style={{ width: '100%' }}>
                   <Card component="div" onClick={() => setSelected(project)} sx={{ borderRadius: 1, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(8,16,27,0.78)', overflow: 'hidden', cursor: 'pointer' }}>
                     <CardActionArea onClick={() => setSelected(project)}>
-                      <div style={{ position: 'relative', width: '100%', aspectRatio: '21 / 7', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'scroll', backgroundImage: `linear-gradient(180deg, rgba(4,8,15,0.08), rgba(4,8,15,0.68)), url('${project.image}')`, transition: 'transform 0.75s ease', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-                      <Box sx={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 40%, ${alpha(project.accent, 0.24)})` }} />
+                      <Box sx={{ position: 'relative', width: '100%', aspectRatio: '21 / 7', overflow: 'hidden', cursor: 'pointer', transition: 'transform 0.75s ease', background: 'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                        <Box
+                          component="img"
+                          src={project.image}
+                          alt={project.title}
+                          loading="lazy"
+                          sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', padding: 2 }}
+                        />
+                        <Box sx={{ position: 'absolute', inset: 0, background: `radial-gradient(circle at top, ${alpha(project.accent, 0.18)}, transparent 42%), linear-gradient(180deg, transparent 58%, ${alpha('#040815', 0.8)})` }} />
                       <Box sx={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: 18, width: { xs: '70%', sm: '50%', md: '30%' }, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1, px: 2, py: 1.2, borderRadius: 1, backgroundColor: alpha('#000000', 0.72), border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(16px)' }}>
                         <Typography sx={{ fontWeight: 800, textAlign: 'left' }}>Click To View</Typography>
                         <ArrowForwardRounded fontSize="small" />
                       </Box>
-                      </div>
+                      </Box>
                   </CardActionArea>
                 </Card>                </motion.div>              ))}
             </Box>
