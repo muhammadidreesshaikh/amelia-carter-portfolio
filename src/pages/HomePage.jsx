@@ -307,15 +307,15 @@ export default function HomePage() {
               <Grid item xs={12} sm={6} lg={4} key={skill.name}>
                 <Card
                   component={motion.div}
-                  initial={{ opacity: 0, y: 18 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   whileHover={{ y: -8 }}
-                  transition={{ duration: 0.45, delay: index * 0.03 }}
+                  transition={{ duration: 0.55, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   sx={{
                     p: 0,
                     height: "100%",
-                    borderRadius: 4,
+                    borderRadius: 1,
                     border: "1px solid rgba(255,255,255,0.08)",
                     background:
                       "linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025))",
@@ -439,7 +439,7 @@ export default function HomePage() {
 
                 <Stack
                   direction="row"
-                  spacing={2}
+                  spacing={{ xs: 1, md: 2 }}
                   sx={{ mt: 3, flexWrap: "wrap" }}
                 >
                   {socialLinks.map((item) => {

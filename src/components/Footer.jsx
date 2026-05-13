@@ -17,8 +17,8 @@ export default function Footer() {
   return (
     <Box component="footer" sx={{ py: 3, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
       <Container maxWidth="xl">
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="space-between" alignItems={{ xs: 'flex-start', md: 'center' }}>
-          <Box component={RouterLink} to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="space-between" alignItems={{ xs: 'center', md: 'center' }}>
+          <Box component={RouterLink} to="/" sx={{ textDecoration: 'none', color: 'inherit', textAlign: { xs: 'left', md: 'left' } }}>
             <Typography variant="h6" sx={{ fontWeight: 900, letterSpacing: '0.14em' }}>
               AMELIA CARTER
             </Typography>
@@ -27,7 +27,7 @@ export default function Footer() {
             </Typography>
           </Box>
 
-          <Typography sx={{ color: 'text.secondary' }}>
+          <Typography sx={{ color: 'text.secondary', textAlign: { xs: 'center', md: 'right' } }}>
           © {new Date().getFullYear()} Amelia Carter. All rights reserved.
         </Typography>
         </Stack>
